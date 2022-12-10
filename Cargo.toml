@@ -3,7 +3,7 @@ name = "shazam-fpgen"
 version = "1.0.0"
 authors = ["Faisal Arshed <faisalarshed28@gmail.com>"]
 edition = "2021"
-# license = "MIT"
+license = "MIT"
 
 [lib]
 crate-type = ["cdylib"]

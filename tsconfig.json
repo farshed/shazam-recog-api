@@ -1,0 +1,18 @@
+{
+	"include": ["pkg", "lib.ts", "__filename"],
+	"exclude": ["dist"],
+	"compilerOptions": {
+		"baseUrl": "./",
+		"outDir": "dist/",
+		"lib": ["DOM", "DOM.Iterable"],
+		"noImplicitAny": true,
+		"declaration": true,
+		"module": "es6",
+		"target": "es5",
+		"jsx": "react",
+		"allowJs": true,
+		"emitDeclarationOnly": true,
+		"allowSyntheticDefaultImports": true,
+		"moduleResolution": "node"
+	}
+}
