@@ -1,4 +1,5 @@
-co;
-import { generate_fingerprint } from './node_modules/shazam-fpgen';
+import { generate_fingerprint } from 'shazam-fpgen';
 
 console.log(generate_fingerprint());
+
+export * as wasm from 'shazam-fpgen';
