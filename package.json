@@ -1,8 +1,7 @@
 {
-	"name": "shazam-api",
+	"name": "shazam-recog-api",
 	"version": "1.0.0",
 	"main": "index.js",
-	"type": "module",
 	"license": "MIT",
 	"author": {
 		"name": "Faisal Arshed",
@@ -10,11 +9,11 @@
 		"url": "https://github.com/farshed"
 	},
 	"scripts": {
-		"build": "wasm-pack build shazam_fpgen --out-dir js",
+		"build": "wasm-pack build --out-dir shazam-fpgen",
 		"serve": "webpack-dev-server"
 	},
 	"dependencies": {
-		"shazam_fpgen": "^1.0.0"
+		"shazam-fpgen": "^1.0.0"
 	},
 	"devDependencies": {
 		"webpack": "^5.75.0",
