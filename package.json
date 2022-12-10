@@ -1,0 +1,24 @@
+{
+	"name": "shazam-api",
+	"version": "1.0.0",
+	"main": "index.js",
+	"type": "module",
+	"license": "MIT",
+	"author": {
+		"name": "Faisal Arshed",
+		"email": "faisalarshed28@gmail.com",
+		"url": "https://github.com/farshed"
+	},
+	"scripts": {
+		"build": "wasm-pack build shazam_fpgen --out-dir js",
+		"serve": "webpack-dev-server"
+	},
+	"dependencies": {
+		"shazam_fpgen": "^1.0.0"
+	},
+	"devDependencies": {
+		"webpack": "^5.75.0",
+		"webpack-cli": "^5.0.1",
+		"webpack-dev-server": "^4.11.1"
+	}
+}
