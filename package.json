@@ -13,7 +13,7 @@
 		"serve": "webpack-dev-server"
 	},
 	"dependencies": {
-		"shazam-fpgen": "^1.0.0"
+		"shazam-fpgen": "./shazam-fpgen"
 	},
 	"devDependencies": {
 		"webpack": "^5.75.0",
