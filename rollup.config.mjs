@@ -1,24 +1,12 @@
-import nodeResolve from '@rollup/plugin-node-resolve';
+// import nodeResolve from '@rollup/plugin-node-resolve';
 // import terser from '@rollup/plugin-terser';
-import pkg from './package.json' assert { type: 'json' };
 import dts from 'rollup-plugin-dts';
 import typescript from '@rollup/plugin-typescript';
 import url from '@rollup/plugin-url';
 
 const LIBRARY_NAME = 'Library';
 const EXTERNAL = [];
-const GLOBALS = { __filename: true };
-
-const banner = `/*!
- * ${pkg.name}
- * ${pkg.description}
- *
- * @version v${pkg.version}
- * @author ${pkg.author}
- * @homepage ${pkg.homepage}
- * @repository ${pkg.repository.url}
- * @license ${pkg.license}
- */`;
+const GLOBALS = {};
 
 const makeConfig = (env = 'development') => {
 	let bundleSuffix = '';
@@ -32,7 +20,6 @@ const makeConfig = (env = 'development') => {
 		external: EXTERNAL,
 		output: [
 			{
-				banner,
 				name: LIBRARY_NAME,
 				file: `dist/${LIBRARY_NAME}.umd.${bundleSuffix}js`,
 				format: 'umd',
@@ -40,14 +27,12 @@ const makeConfig = (env = 'development') => {
 				globals: GLOBALS
 			},
 			{
-				banner,
 				file: `dist/${LIBRARY_NAME}.cjs.${bundleSuffix}js`,
 				format: 'cjs',
 				exports: 'auto',
 				globals: GLOBALS
 			},
 			{
-				banner,
 				file: `dist/${LIBRARY_NAME}.esm.${bundleSuffix}js`,
 				format: 'es',
 				exports: 'named',
@@ -56,7 +41,7 @@ const makeConfig = (env = 'development') => {
 		],
 		plugins: [
 			typescript(),
-			nodeResolve(),
+			// nodeResolve(),
 			url({ include: ['**/*.wasm'], limit: 14336000 })
 			// ...(env === 'production' ? [terser()] : [])
 		]

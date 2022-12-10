@@ -1,15 +1,15 @@
 {
-	"name": "shazamedjs",
+	"name": "shazamed",
 	"version": "1.0.0",
 	"main": "dist/Library.cjs.min.js",
 	"module": "dist/Library.esm.min.js",
 	"unpkg": "dist/Library.umd.min.js",
 	"types": "dist/lib.d.ts",
 	"author": "Faisal Arshed <faisalarshed28@gmail.com>",
-	"homepage": "https://github.com/farshed/shazam-finder-api",
+	"homepage": "https://github.com/farshed/shazamed",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/farshed/shazam-finder-api"
+		"url": "https://github.com/farshed/shazamed"
 	},
 	"license": "MIT",
 	"publishConfig": {

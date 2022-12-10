@@ -1,6 +1,4 @@
-/bin
+/node_modules
 /target
-node_modules/
-dist/
-package-lock.json
+# /dist
 *.log
